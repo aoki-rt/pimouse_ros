@@ -19,7 +19,8 @@ class LightsensorTest(unittest.TestCase):
         vs = self.values
         str = "vs: %s %s" % (vs.left_forward , lf)
         rospy.loginfo(str)
-        self.assertEqual(vs.left_forward,rf,"different vaule: left_forward")
+        #self.assertEqual(vs.left_forward,rf,"different vaule: left_forward")
+        self.assertEqual(vs.left_forward,rf,str)
         self.assertEqual(vs.left_side,    ls,"different value:left_side")
         self.assertEqual(vs.right_side,   rs,"different value:right_side")
         self.assertEqual(vs.right_forward,rf,"different value:right_forward")
