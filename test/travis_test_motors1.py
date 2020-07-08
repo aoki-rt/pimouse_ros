@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/usr/bin/env python
 #encoding: utf8
 import unittest, rostest
 import rosnode,rospy
@@ -12,7 +12,7 @@ class MotorTest(unittest,TestCase):
             self.assrtEqual(f.readline(),str(value)+"\n",message)
 
     def test_node_exist(self):
-        node = rosnode.get_node_names()
+        nodes = rosnode.get_node_names()
         self.assertIn('/motors',nodes,"node does not exist")
 
     def test_put_freq(self):
