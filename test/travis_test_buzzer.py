@@ -32,6 +32,7 @@ class BuzzerTest(unittest.TestCase):
 
         self.client.wait_for_server()
         self.client.send_goal(goal,feedback_cb=self.feedback_cb)
+        self.client.wait_for_server()
 
         self.assertTrue(self.client.get_result(),"invalid result")
         self.assertEuqal(goal.freqs,self.device_values,"invalid feedback:" + ",".join([str(e) for e in self.device_values]))
